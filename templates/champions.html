@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>champions</title>
+</head>
+<body>
+    英雄个数：{{ heros_list|length }}
+    <ul>
+        {% for obj in heros_list %}
+        <li>
+            <a href="/skins/champion/{{ obj.get('objectId') }}">
+                {{ obj.get('name_cn') }}--{{ obj.get('title_cn') }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

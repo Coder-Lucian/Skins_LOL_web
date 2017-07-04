@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>champion_skins</title>
+</head>
+<body>
+    皮肤个数：{{ skins_list|length }}
+    <ul>
+        {% for obj in skins_list %}
+        <li><img src="{{ obj.get('imgFile')._url }}" width="50%" height="50%" /></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
