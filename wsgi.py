@@ -4,6 +4,7 @@ monkey.patch_all()
 
 import os
 import leancloud
+from app import app
 
 
 APP_ID = os.environ['LEANCLOUD_APP_ID']
@@ -20,9 +21,7 @@ if __name__ == '__main__':
     from geventwebsocket.handler import WebSocketHandler
     from werkzeug.serving import run_with_reloader
     from werkzeug.debug import DebuggedApplication
-    from app import app
 
-    application = app
 
     @run_with_reloader
     def run():
