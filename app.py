@@ -12,7 +12,7 @@ def home():
 
 @app.route('/champions')
 def champions():
-    heros_list = CloudUtil.queryByField("Heros", "name_cn", "title_cn", "objectId")
+    heros_list = CloudUtil.queryByField("Heros", "name_cn", "title_cn", "objectId", "skinsCount")
     return render_template('champions.html', heros_list=heros_list)
 
 
@@ -26,9 +26,8 @@ def skins_of_champion(champion_id):
 
 @app.route('/regions')
 def regions():
-    region_list = CloudUtil.queryByField("Regions", "name_cn", "objectId")
-    kwargs = dict(region_list=region_list, champions_count=champions_count)
-    return render_template('regions.html', **kwargs)
+    region_list = CloudUtil.queryByField("Regions", "name_cn", "objectId", "herosCount")
+    return render_template('regions.html', region_list=region_list)
 
 
 @app.route('/champions/region/<region_id>')
@@ -45,9 +44,9 @@ def categorys():
     return render_template('categorys.html', categorys_list=categorys_list)
 
 
-if __name__ == '__main__':
-    import leancloud
-
-    leancloud.init("9e9v9m1wv7rx2jrppneawb3mm7aphot0j2rxoqqcmval2kzz",
-                   "zt57k19dgnks5md0qey4jalvpw39sctrwfjrm6mqm8d44yv7")
-    app.run()
+# if __name__ == '__main__':
+#     import leancloud
+#
+#     leancloud.init("9e9v9m1wv7rx2jrppneawb3mm7aphot0j2rxoqqcmval2kzz",
+#                    "zt57k19dgnks5md0qey4jalvpw39sctrwfjrm6mqm8d44yv7")
+#     app.run()

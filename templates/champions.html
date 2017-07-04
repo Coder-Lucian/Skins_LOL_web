@@ -10,7 +10,7 @@
         {% for obj in heros_list %}
         <li>
             <a href="/skins/champion/{{ obj.get('objectId') }}">
-                {{ obj.get('name_cn') }}--{{ obj.get('title_cn') }}
+                {{ obj.get('name_cn') }}--{{ obj.get('title_cn') }}(皮肤{{obj.get('skinsCount')}}个)
             </a>
         </li>
         {% endfor %}

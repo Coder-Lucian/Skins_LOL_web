@@ -9,7 +9,7 @@
         {% for obj in region_list %}
         <li>
             <a href="/champions/region/{{ obj.get('objectId') }}">
-                {{ obj.get('name_cn') }}
+                {{ obj.get('name_cn') }}(英雄{{obj.get('herosCount')}}个)
             </a>
         </li>
         {% endfor %}
