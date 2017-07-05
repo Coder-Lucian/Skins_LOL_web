@@ -42,11 +42,3 @@ def champions_of_region(region_id):
 def categorys():
     categorys_list = CloudUtil.queryByField("CategoryOfSkins", "name", "objectId")
     return render_template('categorys.html', categorys_list=categorys_list)
-
-
-# if __name__ == '__main__':
-#     import leancloud
-#
-#     leancloud.init("9e9v9m1wv7rx2jrppneawb3mm7aphot0j2rxoqqcmval2kzz",
-#                    "zt57k19dgnks5md0qey4jalvpw39sctrwfjrm6mqm8d44yv7")
-#     app.run()

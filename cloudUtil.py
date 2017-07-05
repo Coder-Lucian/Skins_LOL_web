@@ -11,14 +11,6 @@ class CloudUtil(object):
         return TableClass.create_without_data(objectId)
 
     @classmethod
-    def updateByKwargs(cls, table_name, objectId, **kwargs):
-        TableClass = leancloud.Object.extend(table_name)
-        tableclass = TableClass.create_without_data(objectId)
-        for k, v in kwargs.items():
-            tableclass.set(k, v)
-        tableclass.save()
-
-    @classmethod
     def queryByKeyValue(cls, table_name, key, value):
         TableClass = leancloud.Object.extend(table_name)
         query = TableClass.query
