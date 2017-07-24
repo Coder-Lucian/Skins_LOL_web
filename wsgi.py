@@ -22,7 +22,6 @@ if __name__ == '__main__':
     from werkzeug.serving import run_with_reloader
     from werkzeug.debug import DebuggedApplication
 
-
     @run_with_reloader
     def run():
         global application

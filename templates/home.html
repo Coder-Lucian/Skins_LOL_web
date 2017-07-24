@@ -2,12 +2,60 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>home</title>
-    <link rel="stylesheet" href="/static/style.css" type="text/css">
+    <title>首页</title>
+
+    <!-- 引入 Bootstrap -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="/static/css/cover.css" rel="stylesheet">
+
+    <!-- HTML5 Shim 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
+    <!--[if lt IE 9]>
+        <script src="/static/js/html5shiv.js"></script>
+        <script src="/static/js/respond.min.js"></script>
+    <![endif]-->
 </head>
-<body class="bg-body">
-    <a href="/champions">英雄</a>
-    <a href="/regions">地区</a>
-    <a href="/categorys">系列</a>
+
+<body>
+<div style="position:fixed; left:0px; top:0px; width:100%; height:100%; z-index:-100">
+    <img src="/static/img/bg-body.jpg" width="100%" height="100%"/>
+</div>
+
+<div class="site-wrapper">
+    <div class="site-wrapper-inner">
+        <div class="cover-container">
+            <div class="masthead clearfix">
+                <div class="inner">
+                    <h3 class="masthead-brand"><a href="/">LOL-skins</a></h3>
+                    <nav>
+                        <ul class="nav masthead-nav">
+                            <li><a href="/champions">英雄</a></li>
+                            <li><a href="/regions">地区</a></li>
+                            <li><a href="/categorys">系列</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="inner cover">
+                <h1 class="cover-heading">League Of Legends Skins</h1>
+                <p class="lead">一个皮肤推荐的网站</p>
+                <p class="lead">
+                    <a href="#" class="btn btn-lg btn-default">了解更多</a>
+                </p>
+            </div>
+
+            <div class="mastfoot">
+                <div class="inner">
+                    <p>© Copyright 2017 lolskins - All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
+<script src="/static/js/jquery-3.2.1.slim.min.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
 </body>
 </html>
