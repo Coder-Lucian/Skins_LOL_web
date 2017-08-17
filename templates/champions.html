@@ -11,8 +11,8 @@
 
     <!-- HTML5 Shim 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
     <!--[if lt IE 9]>
-        <script src="/static/js/html5shiv.js"></script>
-        <script src="/static/js/respond.min.js"></script>
+    <script src="/static/js/html5shiv.js"></script>
+    <script src="/static/js/respond.min.js"></script>
     <![endif]-->
 </head>
 <body>
@@ -20,16 +20,44 @@
     <img src="/static/img/bg-body.jpg" width="100%" height="100%"/>
 </div>
 
-    英雄个数：{{ heros_list|length }}
-    <ul>
-        {% for obj in heros_list %}
-        <li>
-            <a href="/skins/champion/{{ obj.get('objectId') }}">
-                {{ obj.get('name_cn') }}--{{ obj.get('title_cn') }}(皮肤{{obj.get('skinsCount')}}个)
-            </a>
-        </li>
-        {% endfor %}
-    </ul>
+<div class="site-wrapper">
+    <div class="site-wrapper-inner">
+        <div class="cover-container">
+            <div class="masthead clearfix">
+                <div class="inner">
+                    <h3 class="masthead-brand"><a href="/">首页</a></h3>
+                    <nav>
+                        <ul class="nav masthead-nav">
+                            <li><a href="/champions">英雄</a></li>
+                            <li><a href="/regions">地区</a></li>
+                            <li><a href="/categorys">系列</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="inner cover">
+                英雄个数：{{ heros_list|length }}
+                <ul>
+                    {% for obj in heros_list %}
+                    <li>
+                        <a href="/skins/champion/{{ obj.get('objectId') }}">
+                            {{ obj.get('name_cn') }}--{{ obj.get('title_cn') }}(皮肤{{obj.get('skinsCount')}}个)
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div class="mastfoot">
+                <div class="inner">
+                    <p>© Copyright 2017 lolskins-commend - All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
 <script src="/static/js/jquery-3.2.1.slim.min.js"></script>
